@@ -1,0 +1,117 @@
+
+
+
+____
+
+
+function loadMessage(){
+    return new Promise(function(resolve,reject){
+        setTimeout(function(){
+            let sucess = true
+
+            if(sucess){
+                resolve("Welcome to Pdm")
+            }
+            else{
+                reject("Failed to reload")
+            }
+        },3000)
+    })
+}
+
+Button.addEventListener("click",function(){
+    message.innerHTML = "loading..."
+  loadMessage()
+
+  .then(function(result){
+    message.innerHTML = result
+  })
+  .catch(function(error){
+    message.innerHTML = error
+  })
+})
+
+
+
+
+
+______
+function showMessage(){
+    return new Promise(function(resolve){
+        setTimeout(function(){
+            resolve("Checking Account")
+        },200)
+    })
+}
+
+Button.addEventListener("click",function(){
+    message.innerHTML = "Loading...."
+
+    showMessage()
+    .then(function(result){
+        message.innerHTML = result
+        return new Promise(function(resolve){
+            setTimeout(function(){
+                resolve("Loding Profile")
+            },3000)
+        })
+        .then(function(result){
+            message.innerHTML= result
+
+            return new Promise(function(resolve){
+                setTimeout(function(result){
+                    resolve("Welcome:)")
+                },3000)
+            })
+        })
+        .then(function(result){
+            message.innerHTML = result
+        })
+    })
+})
+
+
+
+____
+const message = document.getElementById("message")
+const Button = document.getElementById("loadbtn")
+const profile = document.getElementById("profile")
+const grade = document.getElementById("grade")
+const schedules = document.getElementById("schedules")
+
+Button.addEventListener("click",function(){
+    message.innerHTML = "Loading Dashboard.....";
+     message.innerHTML = "Profile:Waiting.....";
+      message.innerHTML = "Grade: Waiting.....";
+       message.innerHTML = "Schedules:Waiting.....";
+
+       const profilePromise = new Promise(function(resolve){
+        setTimeout(function(){
+            profile.innerHTML = "Profile loading";
+
+            resolve();
+
+        },3000);
+    })
+    const gradePromise = new Promise(function(resolve){
+        setTimeout(function(){
+            profile.innerHTML = "Grade loading";
+
+            resolve();
+
+        },3000);
+    })
+    const schedulesPromise = new Promise(function(resolve){
+        setTimeout(function(){
+            profile.innerHTML = "Schedules loading";
+
+            resolve();
+
+        },3000);
+    })
+Promise.all([profilePromise , gradePromise , schedulesPromise])
+.then(function(){
+    message.innerHTML = "Dashboard ready";
+},3000)
+
+})

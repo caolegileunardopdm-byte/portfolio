@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="person.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <h1>My Personal Website</h1>
+        <p class="subtitle">Welcome to my Student Personal Portal</p>
+
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="registration.html" class="active">Registration</a>
+          <a href="grade.html">Grade</a>
+          <a href="profile.html">Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content">
+      <a href="../index.html" class="back-btn">Back</a>
+      <section class="panel form-panel">
+        <h1>Registration</h1>
+        <p class="muted">Fill out the form below to register.</p>
+
+        <form id="registrationForm">
+          <fieldset>
+            <legend>Personal Info</legend>
+
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Gender</legend>
+
+            <div class="radio-group">
+              <label class="radio">
+                <input type="radio" name="gender" value="male" />
+                Male
+              </label>
+
+              <label class="radio">
+                <input type="radio" name="gender" value="female" />
+                Female
+              </label>
+
+              <label class="radio">
+                <input type="radio" name="gender" value="other" />
+                Other
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="primary-btn">Submit</button>
+          <p id="formMessage" class="form-message"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>@gamil.com.nigge.dubistgutginug</p>
+    </footer>
+
+    <script src="person.js"></script>
+  </body>
+</html>

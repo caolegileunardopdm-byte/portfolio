@@ -1,0 +1,460 @@
+/* ============================================================
+   PERSON.CSS — My Personal Website
+   ============================================================ */
+
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ---------- Back button (top-right of hero) ---------- */
+.back-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-2px);
+  font-size: 30px;
+}
+
+.back-btn:active {
+  transform: translateX(0);
+}
+
+@media (max-width: 700px) {
+  .back-btn {
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
+  color: #1f2937;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- HERO HEADER (fixed height, grows with content) ---------- */
+.hero {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+  color: white;
+  padding: 40px 20px 50px; /* smaller so nav fits comfortably */
+  text-align: center;
+  position: relative;
+  /* overflow:hidden removed — it can hide the nav in some browsers */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.1),
+      transparent 40%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2; /* above the ::after glow */
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything horizontally */
+  gap: 6px;
+}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: 0.95;
+  margin: 4px 0 18px; /* space between subtitle and nav */
+}
+
+/* ---------- NAV (always visible) ---------- */
+.nav {
+  display: inline-flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 0 auto;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.nav a.active {
+  background: white;
+  color: #4f46e5;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.content {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 30px auto 50px; /* clear gap below header */
+  padding: 0 20px;
+}
+
+/* ---------- Panels / cards ---------- */
+.panel,
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.panel h1,
+.card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.panel p,
+.card p {
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.panel p.muted,
+.card p.muted {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+}
+
+/* ---------- Two-column Home layout ---------- */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.left-panel {
+  border-top: 4px solid #4f46e5;
+}
+.right-panel {
+  border-top: 4px solid #ec4899;
+}
+
+/* ---------- Registration form ---------- */
+.form-panel {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.form-panel fieldset {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px 20px 22px;
+  margin-bottom: 20px;
+}
+
+.form-panel legend {
+  padding: 0 8px;
+  font-weight: 700;
+  color: #4f46e5;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.form-panel label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+  margin: 12px 0 6px;
+}
+
+.form-panel input[type="text"],
+.form-panel input[type="email"],
+.form-panel input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #f9fafb;
+}
+
+.form-panel input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+.radio-group {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.radio input[type="radio"] {
+  accent-color: #4f46e5;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* ---------- Grade table ---------- */
+.grade-panel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.grade-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 640px;
+}
+
+.grade-table thead {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+}
+
+.grade-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.grade-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #374151;
+}
+
+.grade-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.grade-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge.passed {
+  background: #dcfce7;
+  color: #15803d;
+}
+.badge.failed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ---------- Profile ---------- */
+.profile-panel {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.profile-role {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  text-align: left;
+}
+
+.info-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.info-item .label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.info-item .value {
+  font-size: 1rem;
+  color: #111827;
+  font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .hero {
+    padding: 32px 14px 40px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 14px;
+  }
+  .nav a {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+  .profile-info {
+    grid-template-columns: 1fr;
+  }
+
+  .panel,
+  .card,
+  .form-panel {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Caole | Computer Science Student Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Caole, a Computer Science student building responsive websites with HTML, CSS, and JavaScript. See my skills and laboratory activities."
+    />
+    <meta name="theme-color" content="#f6f7fb" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="project.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Navigation -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="#home" class="logo">Caole<span>.</span></a>
+
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <p class="status">
+              <span class="dot"></span> Open to internships and collaborations
+            </p>
+
+            <h1>Hi, I'm Caole. I build clean, responsive websites.</h1>
+
+            <p class="lead">
+              A Computer Science student passionate about web development,
+              creating responsive websites, and learning new technologies. I
+              enjoy turning ideas into functional and user-friendly digital
+              experiences.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary"
+                >Explore my projects</a
+              >
+              <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            </div>
+
+            <dl class="stats">
+              <div>
+                <dt>Laboratory activities</dt>
+                <dd>5 ata</dd>
+              </div>
+              <div>
+                <dt>Core technologies</dt>
+                <dd>6</dd>
+              </div>
+              <div>
+                <dt>Expected graduation</dt>
+                <dd>lOCK</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-image">
+            <div class="photo-frame">
+              <img src="images/profile.jpg" alt="Portrait of Caole" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section about">
+        <div class="container">
+          <h2 class="section-title">About me</h2>
+
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                I am a IT student interested in web development and software
+                technology. I enjoy creating websites using HTML, CSS, and
+                JavaScript while continuously improving my programming skills. I
+                believe that every project is an opportunity to learn, solve
+                problems, and grow as a future IT professional,"Eme lang may
+                malagay lang sa portfolio".
+              </p>
+              <p>
+                Right now I am focused on writing clean, well-structured code,
+                building layouts that work on phones, tablets, and desktops, and
+                learning how to publish and maintain projects with Git, GitHub,
+                and Vercel.
+              </p>
+              <p>
+                Outside of coding, I like exploring new tools, studying how
+                professional websites are designed, and working with classmates
+                to solve problems together.
+              </p>
+            </div>
+
+            <aside class="about-card" aria-label="Quick facts">
+              <h3>Quick facts</h3>
+              <ul>
+                <li><strong>Course</strong> BS Information Technology</li>
+                <li><strong>School</strong> Pambayang Daluhasaan ng Marilao</li>
+                <li><strong>Location</strong> Philippines</li>
+                <li>
+                  <strong>Interests</strong> Web development, UI design, open
+                  source pag sinipag backend.
+                </li>
+                <li>
+                  <strong>Goal</strong> Become a front-end or full-stack
+                  developer
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section skills">
+        <div class="container">
+          <h2 class="section-title">My skills</h2>
+          <p class="section-intro">
+            The tools I use to build and publish my work, and how comfortable I
+            am with each one.
+          </p>
+
+          <div class="skills-container">
+            <article class="skill-card">
+              <header>
+                <h3>HTML</h3>
+                <span class="level">Advanced beginner</span>
+              </header>
+              <p>
+                Semantic page structure, forms, tables, and accessible markup.
+              </p>
+              <div class="bar"><i style="--level: 80%"></i></div>
+            </article>
+
+            <article class="skill-card">
+              <header>
+                <h3>CSS</h3>
+                <span class="level">Intermediate</span>
+              </header>
+              <p>
+                Flexbox, grid, transitions, and responsive layouts with media
+                queries.
+              </p>
+              <div class="bar"><i style="--level: 75%"></i></div>
+            </article>
+
+            <article class="skill-card">
+              <header>
+                <h3>JavaScript</h3>
+                <span class="level">Beginner</span>
+              </header>
+              <p>DOM manipulation, events, and simple interactive features.</p>
+              <div class="bar"><i style="--level: 55%"></i></div>
+            </article>
+
+            <article class="skill-card">
+              <header>
+                <h3>Git</h3>
+                <span class="level">Beginner</span>
+              </header>
+              <p>Commits, branches, and tracking changes in my projects.</p>
+              <div class="bar"><i style="--level: 55%"></i></div>
+            </article>
+
+            <article class="skill-card">
+              <header>
+                <h3>GitHub</h3>
+                <span class="level">Beginner</span>
+              </header>
+              <p>
+                Hosting repositories and keeping my laboratory work backed up.
+              </p>
+              <div class="bar"><i style="--level: 60%"></i></div>
+            </article>
+
+            <article class="skill-card">
+              <header>
+                <h3>Vercel</h3>
+                <span class="level">Beginner</span>
+              </header>
+              <p>
+                Deploying static websites and sharing them with a live link.
+              </p>
+              <div class="bar"><i style="--level: 50%"></i></div>
+            </article>
+          </div>
+
+          <p class="learning">
+            Currently learning: responsive design patterns, accessibility, and a
+            JavaScript framework.
+          </p>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="section education">
+        <div class="container">
+          <h2 class="section-title">Education and learning path</h2>
+
+          <ol class="timeline">
+            <li>
+              <span class="when">2023 to present</span>
+              <h3>Bachelor of Science in Information Technology</h3>
+              <p>
+                Pambayang Daluhasaan ng Marilao. Coursework in programming
+                fundamentals, web development, and information technology.
+              </p>
+            </li>
+            <li>
+              <span class="when">2026</span>
+              <h3>Web development laboratory activities</h3>
+              <p>
+                Completed five hands-on activities covering HTML, CSS, forms,
+                tables, transitions, and responsive design.
+              </p>
+            </li>
+            <li>
+              <span class="when">2026</span>
+              <h3>Personal portfolio launch</h3>
+              <p>
+                Built and deployed this portfolio using Git, GitHub, and Vercel.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section projects">
+        <div class="container">
+          <h2 class="section-title">My activities</h2>
+          <p class="section-intro">
+            Five laboratory activities that show how my web development skills
+            have grown, from basic HTML to responsive pages.
+          </p>
+
+          <div class="project-grid">
+            <!-- Activity 1 -->
+            <article class="project-card">
+              <div class="thumb">
+                <img
+                  src="images/act1.png"
+                  alt="Laboratory Activity 1 website preview"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Laboratory Activity 1</h3>
+                <p>
+                  An introductory webpage created using HTML to practice basic
+                  elements and webpage structure.
+                </p>
+                <ul class="tags">
+                  <li>HTML</li>
+                </ul>
+                <a href="Activity1/practice.html" class="card-link"
+                  >View project</a
+                >
+              </div>
+            </article>
+
+            <!-- Activity 2 -->
+            <article class="project-card">
+              <div class="thumb">
+                <img
+                  src="images/act2.png"
+                  alt="Laboratory Activity 2 website preview"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Laboratory Activity 2</h3>
+                <p>
+                  A webpage featuring HTML forms, tables, and CSS styling to
+                  improve layout and presentation.
+                </p>
+                <ul class="tags">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+                <a href="Activity2/index.html" class="card-link"
+                  >View project</a
+                >
+              </div>
+            </article>
+
+            <!-- Activity 3 -->
+            <article class="project-card">
+              <div class="thumb">
+                <img
+                  src="images/act3.png"
+                  alt="Laboratory Activity 3 website preview"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Laboratory Activity 3</h3>
+                <p>
+                  An exercise exploring external CSS stylesheets, transitions,
+                  and interactive visual effects.
+                </p>
+                <ul class="tags">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Transitions</li>
+                </ul>
+                <a href="Activity3/Myprofile.html" class="card-link"
+                  >View project</a
+                >
+              </div>
+            </article>
+
+            <!-- Activity 4 -->
+            <article class="project-card">
+              <div class="thumb">
+                <img
+                  src="images/act4.png"
+                  alt="Laboratory Activity 4 landing page preview"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Laboratory Activity 4</h3>
+                <p>
+                  A simple responsive landing page designed to provide a clean
+                  layout across different screen sizes.
+                </p>
+                <ul class="tags">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Responsive</li>
+                </ul>
+                <a href="Activity4/home.html" class="card-link">View project</a>
+              </div>
+            </article>
+
+            <!-- Activity 5 -->
+            <article class="project-card">
+              <div class="thumb">
+                <img
+                  src="images/act5.png"
+                  alt="Laboratory Activity 5 website preview"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body">
+                <h3>Laboratory Activity 5</h3>
+                <p>
+                  A web development activity focused on improving website
+                  structure, styling, and presentation.
+                </p>
+                <ul class="tags">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+                <a href="Activity5/index.html" class="card-link"
+                  >View project</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section contact">
+        <div class="container contact-grid">
+          <div class="contact-info">
+            <h2 class="section-title">Let's connect</h2>
+            <p>
+              Interested in my work or want to connect? Feel free to reach out.
+              I usually reply within two days.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <span>Email</span>
+                <a href="mailto:studentinfo@pdm.com">caolegil@pdm.com</a>
+              </li>
+              <li>
+                <span>Phone</span>
+                <a href="tel:+639123456789">0912-345-6789</a>
+              </li>
+              <li>
+                <span>GitHub</span>
+                <a href="https://github.com/Nard" target="_blank" rel="noopener"
+                  >github.com/Nard</a
+                >
+              </li>
+              <li>
+                <span>LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/gil"
+                  target="_blank"
+                  rel="noopener"
+                  >linkedin.com/in/gil</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <h3>Send me a message</h3>
+
+            <label for="name">Your name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+
+            <label for="email">Your email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <p class="form-note" id="form-note" role="status"></p>
+
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year">2026</span> Caole | Student Portfolio. All
+          rights reserved.
+        </p>
+        <a href="#home">Back to top</a>
+      </div>
+    </footer>
+    <a href="#home" class="to-top" aria-label="Back to top">&uarr;</a>
+  </body>
+</html>
